@@ -1,6 +1,6 @@
 import express from 'express';
 
-import ssr from "./routes/ssr";
+import ssr from "./routers/ssr";
 
 const app = express();
 
