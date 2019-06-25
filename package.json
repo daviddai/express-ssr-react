@@ -1,0 +1,39 @@
+{
+  "name": "ssr-react",
+  "version": "1.0.0",
+  "description": "let's try server-side-rendered react",
+  "main": "index.js",
+  "author": "David Dai",
+  "license": "MIT",
+  "scripts": {
+    "webpack": "webpack",
+    "watch-react": "webpack -wd",
+    "dev": "nodemon --exec babel-node ./src/express/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "handlebars": "^4.1.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "bootstrap": "^4.3.1",
+    "css-loader": "^3.0.0",
+    "ignore-styles": "^5.0.1",
+    "mini-css-extract-plugin": "^0.7.0",
+    "node-sass": "^4.12.0",
+    "null-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.4"
+  }
+}
