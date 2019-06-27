@@ -1,13 +1,27 @@
 import React from "react";
-import TodoList from "./TodoList";
+import { connect } from "react-redux";
 
-export default class App extends React.Component {
+import TodoList from "./TodoList";
+import { addTodoItem } from "../actions/index";
+
+const mapDispatchToProps = dispatch => {
+    return {
+        addTodoItem: todoItem => dispatch(addTodoItem(todoItem))
+    }
+};
+
+const mapStateToProps = state => {
+    return {
+        todoList: state.todoList
+    }
+};
+
+class ConnectedApp extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
             "item": "",
-            "todoList": this.props.todoList
         };
     }
 
@@ -19,10 +33,11 @@ export default class App extends React.Component {
 
     addTodoItem = () => {
         if (this.state.item !== '') {
+            console.log(this.state.item);
+            this.props.addTodoItem(this.state.item);
             this.setState({
-                "item": "",
-                "todoList": [...this.state.todoList, this.state.item]
-            });
+                "item": ""
+            })
         }
     };
 
@@ -37,11 +52,12 @@ export default class App extends React.Component {
                     <button onClick={this.addTodoItem}>Add</button>
                 </div>
                 <div>
-                    <TodoList todoList={this.state.todoList}/>
+                    <TodoList todoList={this.props.todoList}/>
                 </div>
             </div>
-
         )
     }
 
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(ConnectedApp);
