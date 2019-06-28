@@ -1,0 +1,15 @@
+.slick-slide {
+    max-height: 600px;
+}
+
+.slick-prev {
+    margin-left: 30px !important;
+    z-index: 10; /* so that the prev arrow will not be hidden by the slide */
+}
+
+.slick-next {
+    margin-right: 30px !important;
+}
+
+
+

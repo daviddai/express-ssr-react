@@ -5,9 +5,9 @@ import React from "react";
 import { renderToString } from "react-dom/server"
 import { Provider } from "react-redux";
 
-import App from "../../react/components/app";
+import App from "../../react/app/todo/app";
 
-import { getStore } from "../../react/store/index";
+import { getStore } from "../../react/app/todo/store/index";
 
 import fs from "fs";
 import path from "path";
@@ -16,7 +16,7 @@ import path from "path";
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    fs.readFile(path.resolve("src/express/views/index.html"), "utf8", (err, data) => {
+    fs.readFile(path.resolve("src/express/views/todo.html"), "utf8", (err, data) => {
         if (err) throw err;
 
         const hbsTemplate = hbs.compile(data);

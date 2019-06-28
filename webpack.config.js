@@ -40,6 +40,16 @@ const config = {
                     },
                     'css-loader'
                 ]
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif|woff|woff2|eot|ttf|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: "../css/fonts"
+                    }
+                }
             }
         ]
     },

@@ -1,18 +1,17 @@
 import React from "react";
-import { Provider } from "react-redux";
+// import { Provider } from "react-redux";
 import { hydrate } from "react-dom";
-import App from "./components/app";
+// import App from "./app/todo/app";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import {getStore} from "./store";
+import App from "./app/carousel/app";
+// import {getStore} from "./app/todo/store";
 
-const storeState = window.storeState;
-delete(window.storeState);
-const store = getStore(storeState);
+// const storeState = window.storeState;
+// delete(window.storeState);
+// const store = getStore(storeState);
 
 hydrate(
-    <Provider store={store}>
-        <App />
-    </Provider>,
+    <App/>,
     document.getElementById("app")
 );

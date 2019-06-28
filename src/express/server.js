@@ -1,12 +1,14 @@
 import express from 'express';
 
-import ssr from "./routers/ssr";
+import todo from "./routers/todo";
+import slider from "./routers/slider";
 
 const app = express();
 
 app.use(express.static("build"));
 app.use(express.static("public"));
-app.use("/first-ssr", ssr);
+app.use("/todo", todo);
+app.use("/slider", slider);
 
 const port = 3000;
 
