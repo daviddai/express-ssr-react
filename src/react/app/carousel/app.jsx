@@ -1,23 +1,13 @@
 import React from "react";
 
-import Slider from "react-slick";
-import Slide from "./component/slide";
-
-import "ignore-styles";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
-
-import "ignore-styles";
-import "./component/slider.css";
+import Carousel from "./component/Carousel";
 
 export default class App extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            slides: {
-                banners: ["/images/banner-image-1.jpg", "/images/banner-image-2.jpg"]
-            }
+            slides: ["/images/banner-image-1.jpg", "/images/banner-image-2.jpg"]
         };
     }
 
@@ -31,15 +21,7 @@ export default class App extends React.Component {
 
         return (
             <div className="container-fluid px-0">
-                <div style={{ height: "600px"}}>
-                    <Slider {...settings}>
-                        {
-                            this.state.slides.banners.map((url, index) => {
-                                return <Slide key={index} url={url}/>
-                            })
-                        }
-                    </Slider>
-                </div>
+                <Carousel slides={this.state.slides} settings={settings} />
             </div>
         );
     }
