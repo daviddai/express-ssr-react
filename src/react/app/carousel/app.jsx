@@ -2,6 +2,7 @@ import React from "react";
 
 import Carousel from "./component/Carousel";
 import TopBar from "./component/TopBar";
+import Search from "./component/Search";
 
 export default class App extends React.Component {
 
@@ -23,6 +24,7 @@ export default class App extends React.Component {
         return (
             <div className="container-fluid px-0">
                 <TopBar/>
+                <Search/>
                 <Carousel slides={this.state.slides} settings={settings} />
             </div>
         );

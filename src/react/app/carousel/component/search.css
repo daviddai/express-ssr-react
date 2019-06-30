@@ -1,0 +1,7 @@
+.search {
+    position: absolute;
+    z-index: 99;
+    background-color: transparent;
+    margin-top: 250px;
+    margin-left: 25%;
+}

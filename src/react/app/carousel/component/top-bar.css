@@ -3,6 +3,6 @@
     z-index: 99;
 }
 
-.login:hover {
+.top-bar-item {
     cursor: pointer;
 }
