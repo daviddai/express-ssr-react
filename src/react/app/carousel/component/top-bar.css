@@ -1,0 +1,4 @@
+.top-bar {
+    position: absolute;
+    z-index: 99;
+}
