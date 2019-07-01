@@ -6,7 +6,7 @@ import { renderToString } from "react-dom/server"
 
 import fs from "fs";
 import path from "path";
-import App from "../../react/shared/components/carousel/app";
+import App from "../../react/app";
 
 const router = express.Router();
 

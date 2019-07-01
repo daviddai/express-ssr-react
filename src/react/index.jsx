@@ -5,7 +5,7 @@ import { hydrate } from "react-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
-import App from "./shared/components/carousel/app";
+import App from "./app";
 // import {getStore} from "./app/todo/store";
 
 // const storeState = window.storeState;
