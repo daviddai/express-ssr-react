@@ -1,7 +1,8 @@
 import React from "react";
-import { TopBar } from "../../shared/components/topbar/components/TopBar";
+import { TopBar } from "../../shared/components/topbar/TopBar";
 import {Carousel} from "../../shared/components/carousel/Carousel";
-import {Search} from "../../shared/components/searcher/components/Search";
+import {Search} from "../../shared/components/searcher/Search";
+import {Slide} from "../../shared/components/carousel/Slide";
 
 export default class HomeModule extends React.Component {
 
@@ -34,7 +35,15 @@ export default class HomeModule extends React.Component {
                     </span>
                 </TopBar>
                 <Search/>
-                <Carousel slides={this.state.slides} settings={settings}/>
+                <Carousel settings={settings}>
+                    {
+                        this.state.slides.map((url, index) => {
+                            return <Slide>
+                                <img className="w-100" key={index} src={url} alt="banner image" />
+                            </Slide>
+                        })
+                    }
+                </Carousel>
             </div>
         );
     }
