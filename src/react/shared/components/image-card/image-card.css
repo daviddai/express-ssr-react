@@ -1,0 +1,7 @@
+.card-image {}
+
+.image-card-text {
+    position: absolute;
+    z-index: 99;
+    color: white;
+}

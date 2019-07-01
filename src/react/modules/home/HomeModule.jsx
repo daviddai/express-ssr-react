@@ -1,8 +1,9 @@
 import React from "react";
-import { TopBar } from "../../shared/components/topbar/TopBar";
+import { TopBar } from "../../shared/components/top-bar/TopBar";
 import { Carousel } from "../../shared/components/carousel/Carousel";
 import { Search } from "../../shared/components/searcher/Search";
 import { Slide } from "../../shared/components/carousel/Slide";
+import {ImageCard} from "../../shared/components/image-card/ImageCard";
 
 export default class HomeModule extends React.Component {
 
@@ -41,13 +42,37 @@ export default class HomeModule extends React.Component {
                     {
                         this.state.slides.map((url, index) => {
                             return (
-                                <Slide>
-                                    <img className="w-100" key={index} src={url} alt="banner image" />
+                                <Slide key={index}>
+                                    <img className="w-100" src={url} alt="banner image" />
                                 </Slide>
                             )
                         })
                     }
                 </Carousel>
+                <div className="container mt-3">
+                    <div className="row">
+                        <div className="col-md">
+                            <div className="m-1">
+                                <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
+                            </div>
+                        </div>
+                        <div className="col-md">
+                            <div className="m-1">
+                                <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
+                            </div>
+                        </div>
+                        <div className="col-md">
+                            <div className="m-1">
+                                <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
+                            </div>
+                        </div>
+                        <div className="col-md">
+                            <div className="m-1">
+                                <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
