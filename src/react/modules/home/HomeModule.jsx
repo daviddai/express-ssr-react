@@ -1,8 +1,8 @@
 import React from "react";
 import { TopBar } from "../../shared/components/topbar/TopBar";
-import {Carousel} from "../../shared/components/carousel/Carousel";
-import {Search} from "../../shared/components/searcher/Search";
-import {Slide} from "../../shared/components/carousel/Slide";
+import { Carousel } from "../../shared/components/carousel/Carousel";
+import { Search } from "../../shared/components/searcher/Search";
+import { Slide } from "../../shared/components/carousel/Slide";
 
 export default class HomeModule extends React.Component {
 
@@ -34,7 +34,9 @@ export default class HomeModule extends React.Component {
                         <i className="fa fa-user-plus mr-2" aria-hidden="true" />Join
                     </span>
                 </TopBar>
-                <Search/>
+                <Search placeholder="Search by destinations, attractions or activities"
+                        title="explore your travel"
+                />
                 <Carousel settings={settings}>
                     {
                         this.state.slides.map((url, index) => {
