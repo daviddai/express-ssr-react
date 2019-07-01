@@ -1,8 +1,8 @@
 import React from "react";
 
-import Carousel from "./component/Carousel";
-import TopBar from "./component/TopBar";
-import Search from "./component/Search";
+import Carousel from "./Carousel";
+import TopBar from "../topbar/components/TopBar";
+import Search from "../searcher/components/Search";
 
 export default class App extends React.Component {
 

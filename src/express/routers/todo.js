@@ -5,9 +5,9 @@ import React from "react";
 import { renderToString } from "react-dom/server"
 import { Provider } from "react-redux";
 
-import App from "../../react/app/todo/app";
+import App from "../../react/modules/todo/app";
 
-import { getStore } from "../../react/app/todo/store/index";
+import { getStore } from "../../react/modules/todo/store/index";
 
 import fs from "fs";
 import path from "path";
