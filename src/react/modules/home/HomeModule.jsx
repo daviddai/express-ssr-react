@@ -38,9 +38,11 @@ export default class HomeModule extends React.Component {
                 <Carousel settings={settings}>
                     {
                         this.state.slides.map((url, index) => {
-                            return <Slide>
-                                <img className="w-100" key={index} src={url} alt="banner image" />
-                            </Slide>
+                            return (
+                                <Slide>
+                                    <img className="w-100" key={index} src={url} alt="banner image" />
+                                </Slide>
+                            )
                         })
                     }
                 </Carousel>
