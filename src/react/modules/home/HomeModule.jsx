@@ -49,27 +49,33 @@ export default class HomeModule extends React.Component {
                         })
                     }
                 </Carousel>
-                <div className="container mt-3">
-                    <div className="row">
-                        <div className="col-md">
-                            <div className="m-1">
-                                <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                            </div>
+                <div className="container mt-5" style={{ height: "500px" }}>
+                    <div className="row" style={{ height: "50%" }}>
+                        <div className="col-md px-2">
+                            <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
                         </div>
-                        <div className="col-md">
-                            <div className="m-1">
-                                <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                            </div>
+                        <div className="col-md px-2">
+                            <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
                         </div>
-                        <div className="col-md">
-                            <div className="m-1">
-                                <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                            </div>
+                        <div className="col-md px-2">
+                            <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
                         </div>
-                        <div className="col-md">
-                            <div className="m-1">
-                                <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                            </div>
+                        <div className="col-md px-2">
+                            <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
+                        </div>
+                    </div>
+                    <div className="row" style={{ height: "50%"}}>
+                        <div className="col-md px-2">
+                            <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
+                        </div>
+                        <div className="col-md px-2">
+                            <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
+                        </div>
+                        <div className="col-md px-2">
+                            <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
+                        </div>
+                        <div className="col-md px-2">
+                            <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
                         </div>
                     </div>
                 </div>

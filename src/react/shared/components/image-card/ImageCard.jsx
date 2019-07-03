@@ -6,13 +6,11 @@ import "./image-card.css";
 
 export const ImageCard = (props) => {
     return (
-        <div>
+        <div style={{ height: "100%" }} className="py-2">
             <div className="image-card-text">
                 <h4>{props.text}</h4>
             </div>
-            <div>
-                <img className="card-image img-thumbnail" src={props.url} />
-            </div>
+            <img className="card-image" src={props.url} />
         </div>
     );
 };
