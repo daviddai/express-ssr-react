@@ -54,7 +54,7 @@ export default class HomeModule extends React.Component {
                 <div className="container mt-5" style={{ height: "500px" }}>
                     <Row>
                         <Column>
-                            <h3 className="text-center">Top Destinations</h3>
+                            <h3 className="text-center text-uppercase">Top Destinations</h3>
                         </Column>
                     </Row>
                     <Row className="h-50">

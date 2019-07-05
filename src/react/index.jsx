@@ -5,6 +5,8 @@ import { hydrate } from "react-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
+import "./app.css";
+
 import App from "./app";
 // import {getStore} from "./app/todo/store";
 
