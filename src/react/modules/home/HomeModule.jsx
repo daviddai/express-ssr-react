@@ -4,6 +4,8 @@ import { Carousel } from "../../shared/components/carousel/Carousel";
 import { Search } from "../../shared/components/searcher/Search";
 import { Slide } from "../../shared/components/carousel/Slide";
 import {ImageCard} from "../../shared/components/image-card/ImageCard";
+import {Row} from "../../shared/components/grid/Row";
+import {Column} from "../../shared/components/grid/Column";
 
 export default class HomeModule extends React.Component {
 
@@ -50,34 +52,39 @@ export default class HomeModule extends React.Component {
                     }
                 </Carousel>
                 <div className="container mt-5" style={{ height: "500px" }}>
-                    <div className="row" style={{ height: "50%" }}>
-                        <div className="col-md px-2">
+                    <Row>
+                        <Column>
+                            <h3 className="text-center">Top Destinations</h3>
+                        </Column>
+                    </Row>
+                    <Row className="h-50">
+                        <Column className="px-2">
                             <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                        </div>
-                        <div className="col-md px-2">
+                        </Column>
+                        <Column className="px-2">
                             <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                        </div>
-                        <div className="col-md px-2">
+                        </Column>
+                        <Column className="px-2">
                             <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                        </div>
-                        <div className="col-md px-2">
+                        </Column>
+                        <Column className="px-2">
                             <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                        </div>
-                    </div>
-                    <div className="row" style={{ height: "50%"}}>
-                        <div className="col-md px-2">
+                        </Column>
+                    </Row>
+                    <Row className="h-50">
+                        <Column className="px-2">
                             <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                        </div>
-                        <div className="col-md px-2">
+                        </Column>
+                        <Column className="px-2">
                             <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                        </div>
-                        <div className="col-md px-2">
+                        </Column>
+                        <Column className="px-2">
                             <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                        </div>
-                        <div className="col-md px-2">
+                        </Column>
+                        <Column className="px-2">
                             <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                        </div>
-                    </div>
+                        </Column>
+                    </Row>
                 </div>
             </div>
         );
