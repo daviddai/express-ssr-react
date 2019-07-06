@@ -7,6 +7,10 @@ import {ImageCard} from "../../shared/components/image-card/ImageCard";
 import {Row} from "../../shared/components/grid/Row";
 import {Column} from "../../shared/components/grid/Column";
 
+import "ignore-styles";
+import "./home.css";
+import TopDestinations from "./TopDestinations";
+
 export default class HomeModule extends React.Component {
 
     constructor(props) {
@@ -50,22 +54,6 @@ export default class HomeModule extends React.Component {
         };
     }
 
-    getTopDestinationRow = (topDestinationsInRow) => (
-        <Row className="h-50">
-            {
-                topDestinationsInRow.map((topDestination, index) => {
-                    return (
-                        <Column className="px-2">
-                            <ImageCard text={topDestination.name}
-                                       url={topDestination.imageUrl}
-                            />
-                        </Column>
-                    )
-                })
-            }
-        </Row>
-    );
-
     render() {
         const settings = {
             dots: false,
@@ -101,19 +89,9 @@ export default class HomeModule extends React.Component {
                         })
                     }
                 </Carousel>
-                <div className="container mt-5" style={{ height: "500px" }}>
-                    <Row>
-                        <Column>
-                            <h3 className="text-center text-uppercase">Top Destinations</h3>
-                        </Column>
-                    </Row>
-                    {
-                        this.getTopDestinationRow(this.state.topDestinations.slice(0, 4))
-                    }
-                    {
-                        this.getTopDestinationRow(this.state.topDestinations.slice(4, 8))
-                    }
-                </div>
+                <TopDestinations className="top-destinations-container"
+                                 topDestinations={this.state.topDestinations}
+                />
             </div>
         );
     }
