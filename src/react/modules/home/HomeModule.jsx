@@ -1,15 +1,11 @@
 import React from "react";
 import { TopBar } from "../../shared/components/top-bar/TopBar";
-import { Carousel } from "../../shared/components/carousel/Carousel";
 import { Search } from "../../shared/components/searcher/Search";
-import { Slide } from "../../shared/components/carousel/Slide";
-import {ImageCard} from "../../shared/components/image-card/ImageCard";
-import {Row} from "../../shared/components/grid/Row";
-import {Column} from "../../shared/components/grid/Column";
 
 import "ignore-styles";
 import "./home.css";
 import TopDestinations from "./TopDestinations";
+import HeroSlider from "./HeroSlider";
 
 export default class HomeModule extends React.Component {
 
@@ -78,17 +74,9 @@ export default class HomeModule extends React.Component {
                 <Search placeholder="Search by destinations, attractions or activities"
                         title="explore your travel"
                 />
-                <Carousel settings={settings}>
-                    {
-                        this.state.slides.map((url, index) => {
-                            return (
-                                <Slide key={index}>
-                                    <img className="w-100" src={url} alt="banner image" />
-                                </Slide>
-                            )
-                        })
-                    }
-                </Carousel>
+                <HeroSlider settings={settings}
+                            slides={this.state.slides}
+                />
                 <TopDestinations className="top-destinations-container"
                                  topDestinations={this.state.topDestinations}
                 />
