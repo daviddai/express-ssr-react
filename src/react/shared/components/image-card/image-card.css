@@ -1,5 +1,6 @@
 .image-card-container {
     height: 100%;
+    cursor: pointer;
 }
 
 .card-image {
