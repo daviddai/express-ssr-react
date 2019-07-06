@@ -14,7 +14,10 @@ import App from "./app";
 // delete(window.storeState);
 // const store = getStore(storeState);
 
+const data = window.data;
+delete(window.data);
+
 hydrate(
-    <App/>,
+    <App data={data}/>,
     document.getElementById("app")
 );

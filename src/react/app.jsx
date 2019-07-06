@@ -10,7 +10,7 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <HomeModule/>
+            <HomeModule data={this.props.data} />
         );
     }
 
