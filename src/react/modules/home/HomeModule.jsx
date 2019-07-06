@@ -12,9 +12,59 @@ export default class HomeModule extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            slides: ["/images/banner-image-1.jpg", "/images/banner-image-2.jpg"]
+            slides: ["/images/banner-image-1.jpg", "/images/banner-image-2.jpg"],
+            topDestinations: [
+                {
+                    "name": "Hong Kong",
+                    "imageUrl": "https://media.timeout.com/images/103812417/image.jpg"
+                },
+                {
+                    "name": "Hong Kong",
+                    "imageUrl": "https://media.timeout.com/images/103812417/image.jpg"
+                },
+                {
+                    "name": "Hong Kong",
+                    "imageUrl": "https://media.timeout.com/images/103812417/image.jpg"
+                },
+                {
+                    "name": "Hong Kong",
+                    "imageUrl": "https://media.timeout.com/images/103812417/image.jpg"
+                },
+                {
+                    "name": "Hong Kong",
+                    "imageUrl": "https://media.timeout.com/images/103812417/image.jpg"
+                },
+                {
+                    "name": "Hong Kong",
+                    "imageUrl": "https://media.timeout.com/images/103812417/image.jpg"
+                },
+                {
+                    "name": "Hong Kong",
+                    "imageUrl": "https://media.timeout.com/images/103812417/image.jpg"
+                },
+                {
+                    "name": "Hong Kong",
+                    "imageUrl": "https://media.timeout.com/images/103812417/image.jpg"
+                }
+            ]
         };
     }
+
+    getTopDestinationRow = (topDestinationsInRow) => (
+        <Row className="h-50">
+            {
+                topDestinationsInRow.map((topDestination, index) => {
+                    return (
+                        <Column className="px-2">
+                            <ImageCard text={topDestination.name}
+                                       url={topDestination.imageUrl}
+                            />
+                        </Column>
+                    )
+                })
+            }
+        </Row>
+    );
 
     render() {
         const settings = {
@@ -57,34 +107,12 @@ export default class HomeModule extends React.Component {
                             <h3 className="text-center text-uppercase">Top Destinations</h3>
                         </Column>
                     </Row>
-                    <Row className="h-50">
-                        <Column className="px-2">
-                            <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                        </Column>
-                        <Column className="px-2">
-                            <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                        </Column>
-                        <Column className="px-2">
-                            <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                        </Column>
-                        <Column className="px-2">
-                            <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                        </Column>
-                    </Row>
-                    <Row className="h-50">
-                        <Column className="px-2">
-                            <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                        </Column>
-                        <Column className="px-2">
-                            <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                        </Column>
-                        <Column className="px-2">
-                            <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                        </Column>
-                        <Column className="px-2">
-                            <ImageCard text="Hong Kong" url="https://media.timeout.com/images/103812417/image.jpg" />
-                        </Column>
-                    </Row>
+                    {
+                        this.getTopDestinationRow(this.state.topDestinations.slice(0, 4))
+                    }
+                    {
+                        this.getTopDestinationRow(this.state.topDestinations.slice(4, 8))
+                    }
                 </div>
             </div>
         );
