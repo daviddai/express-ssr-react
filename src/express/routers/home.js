@@ -16,11 +16,12 @@ router.get("/", (req, res) => {
     fs.readFile(path.resolve("src/express/views/home.html"), "utf8", (err, html) => {
         if (err) throw  err;
 
-        const data = getHomeData();
-        const hbsTemplate = hbs.compile(html);
-        const hbsToSend = hbsTemplate({react: renderToString(<App data={data} />), data: JSON.stringify(data)});
+        getHomeData((data) => {
+            const hbsTemplate = hbs.compile(html);
+            const hbsToSend = hbsTemplate({react: renderToString(<App data={data} />), data: JSON.stringify(data)});
 
-        res.send(hbsToSend);
+            res.send(hbsToSend);
+        });
     });
 });
 
