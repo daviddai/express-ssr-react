@@ -42,6 +42,16 @@ const config = {
                 ]
             },
             {
+                test: /\.scss$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader
+                    },
+                    "css-loader",
+                    'sass-loader'
+                ]
+            },
+            {
                 test: /\.(png|jpg|jpeg|gif|woff|woff2|eot|ttf|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 use: {
                     loader: "file-loader",

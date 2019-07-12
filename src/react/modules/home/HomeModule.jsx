@@ -3,7 +3,7 @@ import { TopBar } from "../../shared/components/top-bar/TopBar";
 import { Search } from "../../shared/components/searcher/Search";
 
 import "ignore-styles";
-import "./home.css";
+import "./home.scss";
 import TopDestinations from "./TopDestinations";
 import HeroSlider from "./HeroSlider";
 

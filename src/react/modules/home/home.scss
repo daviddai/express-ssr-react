@@ -1,0 +1,10 @@
+@import "~bootstrap/scss/bootstrap";
+
+.top-destinations-container {
+    height: 500px;
+}
+
+.top-destinations-image-card:hover {
+    @extend .pt-0;
+    @extend .pb-4;
+}
