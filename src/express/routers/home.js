@@ -2,7 +2,7 @@ import express from "express";
 import hbs from "handlebars";
 
 import React from "react";
-import { renderToString } from "react-dom/server"
+import { renderToString } from "react-dom/server";
 
 import fs from "fs";
 import path from "path";
