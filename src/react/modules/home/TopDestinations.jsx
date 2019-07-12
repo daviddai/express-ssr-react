@@ -17,7 +17,6 @@ export default class TopDestinations extends React.Component {
                         <Column className="px-2">
                             <ImageCard text={topDestination.name}
                                        url={topDestination.imageUrl}
-                                       className="top-destinations-image-card"
                             />
                         </Column>
                     )
