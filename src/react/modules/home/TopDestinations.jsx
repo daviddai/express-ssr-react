@@ -43,7 +43,6 @@ export default class TopDestinations extends React.Component {
         const settings = {
             dots: false,
             speed: 500,
-            infinite: false,
             slidesToShow: 1
         };
 
