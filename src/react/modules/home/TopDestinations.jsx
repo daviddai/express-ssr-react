@@ -12,7 +12,7 @@ export default class TopDestinations extends React.Component {
     }
 
     getTopDestinationSlide = (topDestinationsInSlide) => (
-        <Slide>
+        <Slide className="mx-2">
             {
                 this.getTopDestinationRow(topDestinationsInSlide.slice(0, 4))
             }
@@ -42,12 +42,10 @@ export default class TopDestinations extends React.Component {
     render() {
         const settings = {
             dots: false,
-            infinite: true,
             speed: 500,
+            infinite: false,
             slidesToShow: 1
         };
-
-        console.log(this.getTopDestinationSlide(this.props.topDestinations.slice(0, 8)));
 
         return (
             <div className={"container mt-5 " + this.props.className}>
@@ -59,14 +57,14 @@ export default class TopDestinations extends React.Component {
                         </div>
                     </Column>
                 </Row>
-                <Row>
-                    <Carousel settings={settings}>
-                        {
-                            this.getTopDestinationSlide(this.props.topDestinations.slice(0, 8))
-                        }
-                    </Carousel>
-                </Row>
-
+                <Carousel settings={settings}>
+                    {
+                        this.getTopDestinationSlide(this.props.topDestinations.slice(0, 8))
+                    }
+                    {
+                        this.getTopDestinationSlide(this.props.topDestinations.slice(8, 16))
+                    }
+                </Carousel>
             </div>
         );
     }

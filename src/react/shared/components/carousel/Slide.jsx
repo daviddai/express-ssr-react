@@ -2,7 +2,7 @@ import React from "react";
 
 export const Slide = (props) => {
     return (
-        <div>
+        <div className={props.className}>
             {props.children}
         </div>
     );
