@@ -2,12 +2,25 @@ import React from "react";
 import {Row} from "../../shared/components/grid/Row";
 import {Column} from "../../shared/components/grid/Column";
 import {ImageCard} from "../../shared/components/image-card/ImageCard";
+import {Carousel} from "../../shared/components/carousel/Carousel";
+import {Slide} from "../../shared/components/carousel/Slide";
 
 export default class TopDestinations extends React.Component {
 
     constructor(props) {
         super(props);
     }
+
+    getTopDestinationSlide = (topDestinationsInSlide) => (
+        <Slide>
+            {
+                this.getTopDestinationRow(topDestinationsInSlide.slice(0, 4))
+            }
+            {
+                this.getTopDestinationRow(topDestinationsInSlide.slice(4, 8))
+            }
+        </Slide>
+    );
 
     getTopDestinationRow = (topDestinationsInRow) => (
         <Row className="h-50">
@@ -27,6 +40,15 @@ export default class TopDestinations extends React.Component {
     );
 
     render() {
+        const settings = {
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1
+        };
+
+        console.log(this.getTopDestinationSlide(this.props.topDestinations.slice(0, 8)));
+
         return (
             <div className={"container mt-5 " + this.props.className}>
                 <Row className="mb-4">
@@ -37,12 +59,14 @@ export default class TopDestinations extends React.Component {
                         </div>
                     </Column>
                 </Row>
-                {
-                    this.getTopDestinationRow(this.props.topDestinations.slice(0, 4))
-                }
-                {
-                    this.getTopDestinationRow(this.props.topDestinations.slice(4, 8))
-                }
+                <Row>
+                    <Carousel settings={settings}>
+                        {
+                            this.getTopDestinationSlide(this.props.topDestinations.slice(0, 8))
+                        }
+                    </Carousel>
+                </Row>
+
             </div>
         );
     }
