@@ -5,6 +5,19 @@ import {ImageCard} from "../../shared/components/image-card/ImageCard";
 import {Carousel} from "../../shared/components/carousel/Carousel";
 import {Slide} from "../../shared/components/carousel/Slide";
 
+function SamplePrevArrow(props) {
+    const { style, onClick } = props;
+    return (
+        <div
+            className="top-destinations-slick-prev"
+            style={{ ...style, display: "block", background: "green" }}
+            onClick={onClick}
+        >
+            <span>!!</span>
+        </div>
+    );
+}
+
 export default class TopDestinations extends React.Component {
 
     constructor(props) {
@@ -43,7 +56,8 @@ export default class TopDestinations extends React.Component {
         const settings = {
             dots: false,
             speed: 500,
-            slidesToShow: 1
+            slidesToShow: 1,
+            prevArrow: <SamplePrevArrow />
         };
 
         return (
