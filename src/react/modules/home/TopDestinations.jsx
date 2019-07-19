@@ -9,7 +9,7 @@ function SamplePrevArrow(props) {
     const { style, onClick } = props;
     return (
         <div
-            className="top-destinations-slick-prev"
+            className="top-destinations-slick-prev mr-3"
             style={{ ...style, display: "block", background: "green" }}
             onClick={onClick}
         >
@@ -25,7 +25,7 @@ export default class TopDestinations extends React.Component {
     }
 
     getTopDestinationSlide = (topDestinationsInSlide) => (
-        <Slide className="mx-2">
+        <Slide>
             {
                 this.getTopDestinationRow(topDestinationsInSlide.slice(0, 4))
             }
@@ -36,7 +36,7 @@ export default class TopDestinations extends React.Component {
     );
 
     getTopDestinationRow = (topDestinationsInRow) => (
-        <Row className="h-50">
+        <Row className="h-50 mx-3">
             {
                 topDestinationsInRow.map((topDestination, index) => {
                     return (
