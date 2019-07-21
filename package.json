@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "webpack": "webpack",
-    "watch-react": "webpack -wd",
+    "watch": "webpack -wd",
     "dev": "nodemon --exec babel-node ./src/express/server.js"
   },
   "dependencies": {

@@ -11,4 +11,17 @@
     z-index: 10;
     position: absolute;
     top: 50%;
+    left: -15px;
+}
+
+.top-destinations-slick-next {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    right: -15px;
+}
+
+.top-destinations-slick-prev,
+.top-destinations-slick-next:hover {
+    cursor: pointer;
 }

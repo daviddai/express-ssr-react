@@ -5,15 +5,28 @@ import {ImageCard} from "../../shared/components/image-card/ImageCard";
 import {Carousel} from "../../shared/components/carousel/Carousel";
 import {Slide} from "../../shared/components/carousel/Slide";
 
-function SamplePrevArrow(props) {
-    const { style, onClick } = props;
+function LeftArrow(props) {
+    const { onClick } = props;
+
     return (
         <div
-            className="top-destinations-slick-prev mr-3"
-            style={{ ...style, display: "block", background: "green" }}
+            className="top-destinations-slick-prev"
             onClick={onClick}
         >
-            <span>!!</span>
+            <span className="fa fa-angle-left font-weight-bolder" />
+        </div>
+    );
+}
+
+function RightArrow(props) {
+    const { onClick } = props;
+
+    return (
+        <div
+            className="top-destinations-slick-next"
+            onClick={onClick}
+        >
+            <span className="fa fa-angle-right font-weight-bolder" />
         </div>
     );
 }
@@ -25,7 +38,7 @@ export default class TopDestinations extends React.Component {
     }
 
     getTopDestinationSlide = (topDestinationsInSlide) => (
-        <Slide>
+        <Slide className="m-2">
             {
                 this.getTopDestinationRow(topDestinationsInSlide.slice(0, 4))
             }
@@ -36,7 +49,7 @@ export default class TopDestinations extends React.Component {
     );
 
     getTopDestinationRow = (topDestinationsInRow) => (
-        <Row className="h-50 mx-3">
+        <Row className="h-50">
             {
                 topDestinationsInRow.map((topDestination, index) => {
                     return (
@@ -57,7 +70,8 @@ export default class TopDestinations extends React.Component {
             dots: false,
             speed: 500,
             slidesToShow: 1,
-            prevArrow: <SamplePrevArrow />
+            prevArrow: <LeftArrow />,
+            nextArrow: <RightArrow />
         };
 
         return (
@@ -75,7 +89,7 @@ export default class TopDestinations extends React.Component {
                         this.getTopDestinationSlide(this.props.topDestinations.slice(0, 8))
                     }
                     {
-                        this.getTopDestinationSlide(this.props.topDestinations.slice(8, 16))
+                        this.getTopDestinationSlide(this.props.topDestinations.slice(0, 8))
                     }
                 </Carousel>
             </div>
