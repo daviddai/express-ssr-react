@@ -38,7 +38,7 @@ export default class TopDestinations extends React.Component {
     }
 
     getTopDestinationSlide = (topDestinationsInSlide) => (
-        <Slide className="m-2">
+        <Slide className="mx-2">
             {
                 this.getTopDestinationRow(topDestinationsInSlide.slice(0, 4))
             }
