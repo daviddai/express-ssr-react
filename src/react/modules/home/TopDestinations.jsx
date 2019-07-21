@@ -89,7 +89,7 @@ export default class TopDestinations extends React.Component {
                         this.getTopDestinationSlide(this.props.topDestinations.slice(0, 8))
                     }
                     {
-                        this.getTopDestinationSlide(this.props.topDestinations.slice(0, 8))
+                        this.getTopDestinationSlide(this.props.topDestinations.slice(8, 16))
                     }
                 </Carousel>
             </div>
