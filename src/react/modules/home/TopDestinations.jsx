@@ -49,7 +49,7 @@ export default class TopDestinations extends React.Component {
     );
 
     getTopDestinationRow = (topDestinationsInRow) => (
-        <Row className="h-50">
+        <Row className="h-50 top-destinations-row">
             {
                 topDestinationsInRow.map((topDestination, index) => {
                     return (

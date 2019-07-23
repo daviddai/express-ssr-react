@@ -2,6 +2,10 @@
     height: 500px;
 }
 
+.top-destinations-row {
+    height: 220px !important;
+}
+
 .top-destinations-image-card-container:hover > img {
     transform: scale(1.03);
     -webkit-transform: scale(1.03);
@@ -10,14 +14,14 @@
 .top-destinations-slick-prev {
     z-index: 10;
     position: absolute;
-    top: 50%;
+    top: 48%;
     left: -15px;
 }
 
 .top-destinations-slick-next {
     z-index: 10;
     position: absolute;
-    top: 50%;
+    top: 48%;
     right: -15px;
 }
 
