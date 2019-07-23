@@ -13,7 +13,7 @@ function LeftArrow(props) {
             className="top-destinations-slick-prev"
             onClick={onClick}
         >
-            <span className="fa fa-angle-left font-weight-bolder" />
+            <span className="fa fa-angle-left font-weight-bolder fa-2x" />
         </div>
     );
 }
@@ -26,7 +26,7 @@ function RightArrow(props) {
             className="top-destinations-slick-next"
             onClick={onClick}
         >
-            <span className="fa fa-angle-right font-weight-bolder" />
+            <span className="fa fa-angle-right font-weight-bolder fa-2x" />
         </div>
     );
 }
