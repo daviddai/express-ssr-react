@@ -66,6 +66,10 @@ export default class TopDestinations extends React.Component {
         </Row>
     );
 
+    showAllDestinationsModal = () => {
+        console.log("showAllDestinationsModal");
+    };
+
     render() {
         const settings = {
             dots: false,
@@ -95,7 +99,7 @@ export default class TopDestinations extends React.Component {
                 </Carousel>
                 <Row className="mt-3">
                     <Column className="text-center">
-                        <Button className="btn-outline-success w-25" text="Explore All Destinations">
+                        <Button className="btn-outline-success w-25" text="Explore All Destinations" onClick={this.showAllDestinationsModal}>
                             <i className="fas fa-map-marker-alt mr-2" />
                         </Button>
                     </Column>
