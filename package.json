@@ -11,6 +11,7 @@
     "dev": "nodemon --exec babel-node ./src/express/server.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
     "axios": "^0.19.0",
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",

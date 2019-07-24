@@ -4,6 +4,7 @@ import {Column} from "../../shared/components/grid/Column";
 import {ImageCard} from "../../shared/components/image-card/ImageCard";
 import {Carousel} from "../../shared/components/carousel/Carousel";
 import {Slide} from "../../shared/components/carousel/Slide";
+import {Button} from "../../shared/components/button/Button";
 
 function LeftArrow(props) {
     const { onClick } = props;
@@ -92,6 +93,13 @@ export default class TopDestinations extends React.Component {
                         this.getTopDestinationSlide(this.props.topDestinations.slice(8, 16))
                     }
                 </Carousel>
+                <Row className="mt-3">
+                    <Column className="text-center">
+                        <Button className="btn-outline-success w-25" text="Explore All Destinations">
+                            <i className="fas fa-map-marker-alt mr-2" />
+                        </Button>
+                    </Column>
+                </Row>
             </div>
         );
     }
