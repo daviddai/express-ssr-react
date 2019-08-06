@@ -2,6 +2,7 @@ import React from "react";
 
 import Modal from 'react-modal';
 import {Button} from "../../shared/components/button/Button";
+import AllDestinations from "./AllDestinations";
 
 export default class AllDestinationsModal extends React.Component {
 
@@ -34,8 +35,9 @@ export default class AllDestinationsModal extends React.Component {
                 <Modal isOpen={this.state.isModalOpen}
                        onRequestClose={this.closeModal}
                        className="all-destinations-modal"
+                       overlayClassName="all-destinations-modal-overlay"
                 >
-                    <div className=""></div>
+                    <AllDestinations/>
                 </Modal>
             </div>
         );
