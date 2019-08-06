@@ -4,7 +4,6 @@ import {Column} from "../../shared/components/grid/Column";
 import {ImageCard} from "../../shared/components/image-card/ImageCard";
 import {Carousel} from "../../shared/components/carousel/Carousel";
 import {Slide} from "../../shared/components/carousel/Slide";
-import AllDestinationsModal from "./AllDestinationsModal";
 
 function LeftArrow(props) {
     const { onClick } = props;
@@ -97,11 +96,6 @@ export default class TopDestinations extends React.Component {
                         this.getTopDestinationSlide(this.props.topDestinations.slice(8, 16))
                     }
                 </Carousel>
-                <Row className="mt-3">
-                    <Column className="text-center">
-                        <AllDestinationsModal/>
-                    </Column>
-                </Row>
             </div>
         );
     }

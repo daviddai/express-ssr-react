@@ -33,6 +33,7 @@ export default class AllDestinationsModal extends React.Component {
                 </Button>
                 <Modal isOpen={this.state.isModalOpen}
                        onRequestClose={this.closeModal}
+                       className="all-destinations-modal"
                 >
                     <div className=""></div>
                 </Modal>

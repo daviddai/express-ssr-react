@@ -6,6 +6,7 @@ import "ignore-styles";
 import "./home.scss";
 import TopDestinations from "./TopDestinations";
 import HeroSlider from "./HeroSlider";
+import AllDestinationsModal from "./AllDestinationsModal";
 
 export default class HomeModule extends React.Component {
 
@@ -43,6 +44,9 @@ export default class HomeModule extends React.Component {
                 <TopDestinations className="top-destinations-container"
                                  topDestinations={this.props.data.topDestinations}
                 />
+                <div className="container pt-5 text-center">
+                    <AllDestinationsModal />
+                </div>
             </div>
         );
     }

@@ -29,3 +29,19 @@
 .top-destinations-slick-next:hover {
     cursor: pointer;
 }
+
+.ReactModal__Overlay--after-open {
+    z-index: 100;
+    position: absolute;
+}
+
+.all-destinations-modal {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 15%;
+    bottom: 20%;
+    left: 20%;
+    right: 20%;
+    background-color: yellow;
+}
